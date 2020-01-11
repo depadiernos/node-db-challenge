@@ -1,0 +1,42 @@
+GET http://localhost:4000/api/projects
+
+###
+GET http://localhost:4000/api/resources
+
+###
+GET http://localhost:4000/api/tasks
+
+###
+
+GET http://localhost:4000/api/projects/1
+
+###
+
+POST http://localhost:4000/api/projects/
+content-type: application/json
+
+{
+    "name": "Project",
+    "description": "This is a project"
+}
+
+###
+
+POST http://localhost:4000/api/resources
+content-type: application/json
+
+{
+    "name": "Resource",
+    "description": "A resource to use"
+}
+
+###
+
+POST http://localhost:4000/api/tasks
+content-type: application/json
+
+{
+    "description": "Task to complete",
+    "notes": "Need to complete before deadline.",
+    "project_id": 1
+}
