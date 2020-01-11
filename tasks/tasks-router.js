@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get("/", async (req, res, next) => {
   try {
-    res.json(await Resources.find())
+    res.json(await Tasks.find())
   } catch (err) {
     next(err)
   }
@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    res.json(await Resources.insert(req.body))
+    res.json(await Tasks.add(req.body))
   } catch (err) {
     next(err)
   }
