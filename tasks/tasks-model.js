@@ -7,7 +7,10 @@ const find = async () => {
   })
 }
 
-const findById = () => {}
+const findById = async (id) => {  
+  const [task] = await db("tasks").where({ id })
+  return { ...task, completed: task.completed === 1 ? true : false }
+}
 
 const add = async (body) => {
   const [id] = await db("tasks").insert(body)
