@@ -6,13 +6,10 @@ GET http://localhost:4000/api/resources
 ###
 GET http://localhost:4000/api/tasks
 
-
 ###
-
 GET http://localhost:4000/api/projects/1
 
 ###
-
 POST http://localhost:4000/api/projects/
 content-type: application/json
 
@@ -22,7 +19,6 @@ content-type: application/json
 }
 
 ###
-
 POST http://localhost:4000/api/resources
 content-type: application/json
 
@@ -32,7 +28,6 @@ content-type: application/json
 }
 
 ###
-
 POST http://localhost:4000/api/tasks
 content-type: application/json
 

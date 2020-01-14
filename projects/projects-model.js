@@ -14,7 +14,7 @@ const findById = async (id) => {
     .where({ id })
     .first()
   const _tasks = await db("tasks")
-    .where({ id })
+    .where("project_id", id )
     .select("description", "notes", "completed")
   const tasks = _tasks.map((task) => {
     return { ...task, completed: task.completed === 1 ? true : false }
